@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    letter-spacing: 0px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    margin: 0;
+    color: #fff;
+}
+body {
+  
+    background-color: #ffffff;
+}
+header{
+    min-height: 12vh;
+    background: black;
+    display: grid;
+    justify-items: end;
+    align-items: end;
+    padding-top: 0;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 0;
+}
+#menu{
+    color: #ffff;
+}
+#menu a{
+    margin: 10px;
+    font-size: 18px;
+    text-transform: uppercase; /* deixa tudo maiusculo */
+    text-decoration: none; /* tira o sublinhado dos links */
+    color: #ffff; /* Cor das letras do link */
+}
+/* Efeito nos links: Quando passar o mouse por cima */
+#menu a:hover{
+    color: orange;
+}
+
+#conteudo-um img {
+    width: 400px;
+ 
+}
+
+#conteudo-dois img {
+    width: 400px;
+    
+}
+
+section{
+    display: grid;
+    justify-items: center;
+    padding: 1vh;
+    padding-top: 40px;
+}
+
+
+#conteudo-um {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    margin-bottom: 15px;
+    width: 80%;
+   
+}
+#conteudo-dois{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    margin-bottom: 15px;
+    width: 80%;
+}
+#conteudo-dois div{
+    text-align: right;
+}
+
+#conteudo-um p{
+    color: #000;
+}
+#conteudo-dois p{
+    color: #000;
+}
+
+section h1{
+    color: #5c0dac;
+}
+
+/* CARDS ROUBADOS */
+
+.cards {
+    display: grid; 
+    /* DEIXA OS PERSONAGENS EM UMA SÓ LINHA */
+    grid-column: 1/-1;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+    /* COR DE FUNDO DA LINHA QUE CONTEM OS CARDS */
+    background: rgb(255, 255, 255);
+
+    /* ESPAÇAMENTO ENTRE OS CARDS */
+    grid-gap: 2rem;
+
+    /* MARGEM DE FORA DOS CARDS */
+    padding: 2rem;
+
+    /* DEIXA O CARD COM O EFEITO DE BANDEIRA LEVANTADA */
+    perspective: 1000px;
+}
+
+.framework-card {
+
+    /* MUDA A COR DE FUNDO DO CARD */
+    background: #fff;
+
+    /* ARREDONDA AS BORDAS DO CARD */
+    border-radius: 20px;
+
+    /* AUMENTA A MARGEM DE DENTRO DO CARD */
+    padding: 1rem;
+
+    /* AUMENTA A MARGEM DE CIMA DO CARD */
+    padding-top: 3rem;
+
+    /* POSIÇÃO DO CARD */
+    position:relative;
+
+    /* A POSIÇÃO DO MOVIMENTO DOS CARDS */
+    transform-origin: top center;
+
+    /* O QUANTO O CARD ESTÁ LEVANTADO */
+    --rotate: 10deg;
+
+    /* FAZER A ROTAÇÃO FICAR SUAVE */
+    transform: rotateX(var(--rotate));
+
+    /* TEMPO DA ROTAÇÃO */
+    transition: transform 0.2s;
+
+    /* SOMBRA DOS CARDS */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* BOTÕES DOS CARDS */
+.framework-card:before {
+    right: auto;
+    left: 20px;
+}
+
+/* MOVIMENTO DO CARD */
+.framework-card:hover {
+    transform: rotateX(-20deg);
+}
+
+/* ESTILO DOS BOTÕES */
+.framework-card:before,
+.framework-card:after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #5c0dac;
+    border: 1px solid #000;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    top: 15px;
+    right: 20px;
+    position: absolute;
+    border-radius: 50%;
+}
+/* IMAGEM DO CARD */
+.framework-card img {
+    height: 100px;
+    width: 100%;
+    object-fit: contain;
+}
+
+img {
+    max-width: 100%;
+}
+
+
